@@ -7,6 +7,11 @@ własnego kroju ani własnych komponentów.
 **Kanon:** `C:\Users\Łukasz\Dropbox\HM_HOMAI_OS\08_ZASOBY\HMDesign\`
 Specyfikacja: `SPEC.md` · Reguły obowiązkowe: `ZGODNOSC.md`
 
+**Treść strony podlega `GLOS.md`** z tego samego kanonu: nazwy produktów
+(TES+, obieg zdarzeń z odpowiedzialnością, widok zarządczy), zdania kanoniczne,
+zasada dowodu i ton. Wygląd — HMDesign, treść — GLOS.md. Zmiana tekstu zaczyna
+się w `GLOS.md`, nie w `index.html`.
+
 ## Jak system jest tu wpięty
 
 Strona to **dwa samodzielne pliki** — `index.html` (PL) i `english/index.html` (EN)
