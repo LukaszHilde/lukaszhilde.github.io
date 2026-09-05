@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wzorzec podstrony — HMDesign</title>
+<meta name="description" content="Wzorzec podstrony usługi w systemie HMDesign: ten sam układ, mniej bloków.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23eb5c25'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="hmdesign-web.css">
+</head>
+<body>
+
+<header class="siteheader">
+  <div class="topbar"></div>
+  <div class="wrap">
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a href="index.html" class="wordmark" aria-label="Hildebrandt Management — strona główna">
+        <span class="wsq" aria-hidden="true"></span><span translate="no" class="notranslate">Hildebrandt Management</span>
+      </a>
+      <div class="nav__links">
+        <a href="index.html#zakres">Zakres</a>
+        <a href="uslugi-tes.html" style="color:var(--hm-accent)">Usługi</a>
+        <a href="index.html#o-mnie">O mnie</a>
+        <a href="index.html#kontakt" class="nav__cta">Kontakt</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__diag" aria-hidden="true"></div>
+    <div class="wrap" style="padding-top:84px;padding-bottom:84px">
+      <p class="eyebrow eyebrow--ondark">Wzorzec podstrony</p>
+      <h1 id="hero-title" style="margin-top:26px;font-size:clamp(34px,4.6vw,56px)">Podstrona ma ten sam <span class="accent">układ</span>, tylko krótszy.</h1>
+      <p class="hero__sub">Hero niższe niż na stronie głównej, jedna sekcja zakresu, jedna sekcja granic, kontakt i stopka. Nawigacja wraca na stronę główną.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#zakres">Zakres <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost-dark" href="index.html">Strona główna <span class="arw" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="wrap">
+      <p>Jedno zdanie mówiące, komu ta usługa służy i kiedy nie ma sensu.</p>
+    </div>
+  </section>
+
+  <section class="section" id="zakres" aria-labelledby="zakres-title">
+    <div class="wrap">
+      <div class="shead">
+        <p class="snum">01</p>
+        <p class="eyebrow">Zakres</p>
+        <h2 class="h2" id="zakres-title">Co dokładnie wchodzi w zakres.</h2>
+        <p class="lead">Trzy do pięciu pozycji. Każda z terminem albo miarą — bez tego lista jest obietnicą, nie zakresem.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card card--bar">
+          <p class="card__num">01 · Wejście</p>
+          <h3 class="card__title">Pół dnia na budowie</h3>
+          <p class="card__text">Rozmowa z kierownictwem, przegląd dokumentacji i korespondencji, jedno przejście po obiekcie.</p>
+        </div>
+        <div class="card card--bar">
+          <p class="card__num">02 · Praca</p>
+          <h3 class="card__title">Materiał roboczy</h3>
+          <p class="card__text">Zestawienie na Twoich źródłach: co jest, czego brakuje, gdzie decyzja nie ma podstawy.</p>
+        </div>
+        <div class="card card--bar">
+          <p class="card__num">03 · Wyjście</p>
+          <h3 class="card__title">Uzgodnienie zakresu</h3>
+          <p class="card__text">Kryteria kontrolowanego pilota albo jasna informacja, że pilot nie jest potrzebny.</p>
+        </div>
+      </div>
+      <p class="callout">Zdanie graniczne: co ta usługa daje, a czego nie zastępuje. Callout jeden na podstronę.</p>
+    </div>
+  </section>
+
+  <section class="section section--grey" id="granice" aria-labelledby="granice-title">
+    <div class="wrap">
+      <div class="shead">
+        <p class="snum">02</p>
+        <p class="eyebrow">Granice</p>
+        <h2 class="h2" id="granice-title">Czego ta usługa nie robi.</h2>
+      </div>
+      <ul class="alist alist--x">
+        <li>Nie zastępuje inspektora nadzoru ani projektanta.</li>
+        <li>Nie podejmuje decyzji za kierownictwo budowy.</li>
+        <li>Nie wdraża narzędzia, dopóki nie ma zgody na zakres i kryteria.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<section class="section section--dark contact" id="kontakt" aria-labelledby="kontakt-title">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--ondark">Kontakt</p>
+    <div class="contact__grid">
+      <div>
+        <h2 id="kontakt-title" style="margin-top:18px">Opiszcie sytuację, a zaproponuję właściwy pierwszy krok.</h2>
+        <p class="lead">Pół dnia na jednej budowie wystarcza, żeby powiedzieć, co da się poprawić bez nowego narzędzia, a co wymaga systemu.</p>
+        <div class="contact__actions">
+          <a class="btn btn--primary" href="tel:+48889447117">Zadzwoń <span class="arw" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost-dark" href="https://www.linkedin.com/in/lukasz-hildebrandt/">Napisz na LinkedIn <span class="arw" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="cbox">
+        <div class="crow"><span class="crow__k">Telefon</span><span class="crow__v"><a href="tel:+48889447117">+48 889 447 117</a></span></div>
+        <div class="crow"><span class="crow__k">LinkedIn</span><span class="crow__v"><a href="https://www.linkedin.com/in/lukasz-hildebrandt/">Łukasz Hildebrandt →</a></span></div>
+        <div class="crow"><span class="crow__k">Lokalizacja</span><span class="crow__v">Gdańsk / Trójmiasto, Polska</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="fmeta"><b translate="no" class="notranslate">Hildebrandt Management</b> · Łukasz Hildebrandt<br><a href="tel:+48889447117">+48 889 447 117</a> · Gdańsk / Trójmiasto, Polska</div>
+    <div class="fcopy">Wzorzec podstrony HMDesign. Treść przykładowa — zastępowana zatwierdzonym tekstem usługi (Notion „HM — SYSTEM").</div>
+  </div>
+</footer>
+</body>
+</html>

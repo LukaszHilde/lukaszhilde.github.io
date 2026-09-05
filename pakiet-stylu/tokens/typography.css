@@ -1,0 +1,47 @@
+/* HMDesign — typografia. Wyłącznie Lato (self-hosted).
+   Nagłówki 900, ciasny tracking, wielkość zdaniowa.
+   Eyebrow = UPPERCASE, tracking .16–.18em, pomarańcz.
+   System ma dwie skale rozmiarów: dokument A4 (pt) i deck 16:9 (px).
+   Rozmiary trzymamy przy blokach; tu żyje rodzina, grubości, tracking, interlinia. */
+:root{
+  /* Rodzina */
+  --hm-font: 'Lato', Arial, Helvetica, sans-serif;
+
+  /* Grubości (Lato): light / regular / bold / heavy / black */
+  --hm-fw-light:   300; /* @kind font */
+  --hm-fw-regular: 400; /* @kind font */
+  --hm-fw-bold:    700; /* @kind font */
+  --hm-fw-heavy:   800; /* @kind font */
+  --hm-fw-black:   900; /* @kind font */
+
+  /* Tracking (letter-spacing) */
+  --hm-tracking-h1:      -.025em; /* @kind font */
+  --hm-tracking-h2:      -.01em;  /* @kind font */
+  --hm-tracking-tight:   -.03em;  /* @kind font */
+  --hm-tracking-snug:    -.01em;  /* @kind font */
+  --hm-tracking-eyebrow:  .18em;  /* @kind font */
+  --hm-tracking-label:    .16em;  /* @kind font */
+  --hm-tracking-caps:     .1em;   /* @kind font */
+
+  /* Interlinia */
+  --hm-leading-h1:    1.03; /* @kind font */
+  --hm-leading-h2:    1.08; /* @kind font */
+  --hm-leading-lead:  1.44; /* @kind font */
+  --hm-leading-body:  1.4;  /* @kind font */
+  --hm-leading-tight: 1.2;  /* @kind font */
+
+  /* Skala dokumentu A4 (pt) — referencyjnie */
+  --hm-doc-h1:      25pt;   /* @kind font */
+  --hm-doc-h2:      16pt;   /* @kind font */
+  --hm-doc-lead:    11.4pt; /* @kind font */
+  --hm-doc-body:    8.8pt;  /* @kind font */
+  --hm-doc-small:   7.7pt;  /* @kind font */
+  --hm-doc-eyebrow: 7.7pt;  /* @kind font */
+
+  /* Skala deck 16:9 (px @1920) — referencyjnie */
+  --hm-deck-h1:      82px; /* @kind font */
+  --hm-deck-h2:      44px; /* @kind font */
+  --hm-deck-lead:    23px; /* @kind font */
+  --hm-deck-body:    18px; /* @kind font */
+  --hm-deck-eyebrow: 14px; /* @kind font */
+}

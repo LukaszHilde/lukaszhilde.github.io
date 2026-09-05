@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hildebrandt Management — od strategii i oferty przez realizację po wynik kontraktu</title>
-  <meta name="description" content="Hildebrandt Management łączy blisko 20 lat praktyki po stronie generalnego wykonawcy z narzędziami. Od strategii i oferty przez realizację po wynik kontraktu.">
+  <meta name="description" content="Hildebrandt Management łączy blisko 20 lat praktyki po stronie generalnego wykonawcy z narzędziami, które zwiększają szybkość i powtarzalność pracy. Od strategii i oferty przez realizację po wynik kontraktu.">
   <meta name="author" content="Łukasz Hildebrandt">
   <link rel="canonical" href="https://hildebrandtmanagement.com/">
   <link rel="alternate" hreflang="pl" href="https://hildebrandtmanagement.com/">
@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://hildebrandtmanagement.com/og-image-pl.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Hildebrandt Management — systemy pracy dla tych, którzy prowadzą budowy">
+  <meta property="og:image:alt" content="Hildebrandt Management — od strategii i oferty przez realizację po wynik kontraktu">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@Hildebrandt_LH">
   <meta name="twitter:image" content="https://hildebrandtmanagement.com/og-image-pl.png">
@@ -265,6 +265,7 @@
 
     /* ---- grids / cards ---- */
     .grid{display:grid;gap:1px;background:var(--hm-hairline);border:1px solid var(--hm-hairline)}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
     .grid-3{grid-template-columns:repeat(3,1fr)}
     .grid-5{grid-template-columns:repeat(5,1fr)}
     .card{background:var(--hm-white);padding:26px 24px 30px}
@@ -300,13 +301,13 @@
 
     /* contact */
     .contact__grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start;margin-top:8px}
-    .contact h2{color:#fff;font-size:40px}
+    .contact h2{color:#fff;font-size:36px;letter-spacing:-.01em;line-height:1.08}
     .contact .lead{margin-top:20px}
     .cbox{border:1px solid rgba(255,255,255,.16);padding:0}
     .crow{display:flex;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.12)}
     .crow:last-child{border-bottom:none}
     .crow__k{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--hm-grey-500);width:96px;flex:0 0 auto}
-    .crow__v{font-size:17px;font-weight:700;color:#fff}
+    .crow__v{font-size:17px;font-weight:700;color:#fff;min-width:0;overflow-wrap:anywhere}
     .crow__v a:hover{color:var(--hm-orange)}
     .contact__actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px}
 
@@ -318,12 +319,48 @@
     .footer a:hover{color:var(--hm-orange)}
     .footer .fcopy{font-size:12px;color:var(--hm-grey-500)}
 
+
+    /* ---- karta uslugi (komponent osobny) ---- */
+    .svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .scard{background:var(--hm-white);border:1px solid var(--hm-hairline);border-top:3px solid var(--hm-accent);padding:32px 28px 36px;display:flex;flex-direction:column}
+    .scard__num{font-size:14px;font-weight:800;letter-spacing:.12em;color:var(--hm-accent);margin-bottom:14px}
+    .scard__title{font-size:22px;font-weight:900;letter-spacing:-.01em;line-height:1.15;color:var(--hm-black);margin-bottom:16px;text-wrap:balance}
+    .scard .scard__q{font-size:17px;line-height:1.5;color:var(--hm-grey-700);margin-bottom:16px}
+    .scard p{font-size:15px;line-height:1.55;color:var(--hm-grey-600)}
+    .scard p + p{margin-top:12px}
+    .scard p strong{color:var(--hm-black);font-weight:700}
+    .scard .scard__need{font-size:14px;line-height:1.5;color:var(--hm-grey-500);margin-top:12px}
+    .scard__cta{margin-top:20px;font-size:15px;font-weight:800;color:var(--hm-accent);display:inline-flex;align-items:center;gap:8px}
+    .scard__cta:hover{color:var(--hm-orange-deep)}
+
+    /* ---- dowod (liczby) ---- */
+    .proof__num{font-size:34px;font-weight:900;letter-spacing:-.02em;color:var(--hm-accent);line-height:1;margin-bottom:12px}
+
+    /* ---- menu mobilne bez JS ---- */
+    .nav__check{position:absolute;opacity:0;width:1px;height:1px;overflow:hidden;pointer-events:none}
+    .nav__toggle{display:none;align-items:center;gap:10px;border:1px solid var(--hm-black);
+      padding:9px 14px;font-size:13px;font-weight:800;letter-spacing:.02em;color:var(--hm-black);cursor:pointer;user-select:none}
+    .nav__check:focus-visible + .nav__toggle,.nav__links a:focus-visible{outline:3px solid var(--hm-accent);outline-offset:2px}
+    .nav__bars{width:16px;height:2px;background:currentColor;position:relative;display:block}
+    .nav__bars::before,.nav__bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor}
+    .nav__bars::before{top:-5px}.nav__bars::after{top:5px}
+
     @media (max-width:900px){
       .wrap{padding:0 24px}
       .section{padding:64px 0}
       .grid-5{grid-template-columns:repeat(2,1fr)}
-      .grid-3,.offer,.princ,.about,.contact__grid{grid-template-columns:1fr}
-      .nav__links{display:none}
+      .grid-2,.grid-3,.offer,.princ,.about,.contact__grid,.svc{grid-template-columns:1fr}
+      .nav{position:relative;flex-wrap:wrap;height:auto;min-height:64px}
+  .crow{flex-direction:column;align-items:flex-start;gap:6px;padding:16px 0}
+  .crow__k{width:auto}
+  .crow__v{min-width:0;overflow-wrap:anywhere;font-size:16px}
+      .nav__toggle{display:inline-flex}
+      .nav__links{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0;
+        border-top:1px solid var(--hm-hairline);padding:8px 0 16px}
+      .nav__check:checked ~ .nav__links{display:flex}
+      .nav__links a{padding:13px 2px;border-bottom:1px solid var(--hm-hairline);font-size:16px}
+      .nav__links a:last-child{border-bottom:none}
+      .nav__cta{text-align:center;margin-top:10px;padding:13px 16px}
       .about{gap:32px}
     }
     @media (max-width:560px){
@@ -332,7 +369,7 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
 
   <header class="siteheader">
     <div class="topbar"></div>
@@ -341,10 +378,12 @@
         <a href="#top" class="wordmark" aria-label="Hildebrandt Management — strona główna">
           <span class="wsq" aria-hidden="true"></span><span translate="no" class="notranslate">Hildebrandt Management</span>
         </a>
-        <div class="nav__links">
-          <a href="#dlaczego">Dlaczego</a>
+        <input type="checkbox" class="nav__check" id="navCheck" aria-controls="navLinks" aria-label="Rozwiń menu">
+        <label class="nav__toggle" for="navCheck"><span class="nav__bars" aria-hidden="true"></span><span>Menu</span></label>
+        <div class="nav__links" id="navLinks">
+          <a href="#uslugi">Usługi</a>
+          <a href="#dowod">Realizacje</a>
           <a href="#obszary">Zakres</a>
-          <a href="#oferta">Współpraca</a>
           <a href="#o-mnie">O mnie</a>
           <a href="#kontakt" class="nav__cta">Kontakt</a>
           <a href="/english/">EN</a>
@@ -362,7 +401,7 @@
         <h1 id="hero-title" style="margin-top:26px">Od pierwszej szansy do <span class="accent">wyniku kontraktu</span>.</h1>
         <p class="hero__sub"><span translate="no" class="notranslate">Hildebrandt Management</span> łączy blisko 20 lat doświadczenia po stronie generalnego wykonawcy z narzędziami, które zwiększają szybkość, zakres i powtarzalność pracy. Prowadzi Łukasz Hildebrandt — praktyk przygotowania, realizacji i domykania kontraktów budowlanych.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#obszary">Zobacz zakres <span class="arw" aria-hidden="true">→</span></a>
+          <a class="btn btn--primary" href="#uslugi">Zobacz usługi <span class="arw" aria-hidden="true">→</span></a>
           <a class="btn btn--ghost" href="#kontakt">Porozmawiajmy</a>
         </div>
       </div>
@@ -374,10 +413,66 @@
       </div>
     </section>
 
+    <section class="section" id="uslugi" aria-labelledby="uslugi-title">
+      <div class="wrap">
+        <div class="shead">
+          <p class="eyebrow">USŁUGI</p>
+          <h2 class="h2" id="uslugi-title">Przygotowanie zakresu i dokumentacji do wyceny.</h2>
+        </div>
+        <div class="svc">
+          <article class="scard" id="tes">
+            <div class="scard__num">/01</div>
+            <h3 class="scard__title">TES — wspólna podstawa do porównania ofert</h3>
+            <p class="scard__q">Zbierasz oferty na obiekt lub wybrany zakres robót i chcesz porównać je na jednej podstawie?</p>
+            <p>Opracowuję tabelę elementów scalonych (TES) od podstaw albo sprawdzam istniejącą. Zakres pracy ustalamy podczas rozmowy. Na podstawie dokumentacji porządkuję pozycje do wyceny i wskazuję kwestie wymagające wyjaśnienia lub decyzji.</p>
+            <p><strong>Otrzymujesz</strong> edytowalny arkusz TES oraz rejestr pytań, decyzji i ryzyk — podstawę do zebrania ofert i wyjaśnienia różnic między nimi.</p>
+            <p class="scard__need">Do rozpoczęcia potrzebuję dokumentacji przewidzianej do wyceny oraz istniejącej TES, jeśli ma podlegać sprawdzeniu.</p>
+            <a class="scard__cta" href="#kontakt">Porozmawiajmy o przygotowaniu Twojego przetargu <span class="arw" aria-hidden="true">→</span></a>
+          </article>
+          <article class="scard" id="audyt-dokumentacji">
+            <div class="scard__num">/02</div>
+            <h3 class="scard__title">Audyt dokumentacji i paczki podwykonawcze</h3>
+            <p class="scard__q">Wysyłasz zapytania do podwykonawców i potrzebujesz dokumentacji dobranej do zakresu każdej branży?</p>
+            <p>Sprawdzam przekazane materiały, porządkuję dokumenty i ich rewizje oraz wskazuję braki, sprzeczności i wersje wymagające potwierdzenia. Przygotowuję podział dokumentacji na uzgodnione zakresy branżowe.</p>
+            <p><strong>Otrzymujesz</strong> rejestr dokumentów, listę ryzyk i pytań oraz paczki plików dla poszczególnych branż. Każda paczka zawiera listę spraw otwartych do przekazania oferentom.</p>
+            <p class="scard__need">Do rozpoczęcia potrzebuję dokumentacji, którą planujesz przekazać podwykonawcom. Zakres audytu ustalamy podczas rozmowy.</p>
+            <a class="scard__cta" href="#kontakt">Porozmawiajmy o dokumentacji Twojej inwestycji <span class="arw" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--grey" id="dowod" aria-labelledby="dowod-title">
+      <div class="wrap">
+        <div class="shead">
+          <p class="eyebrow">WYKONANE PRACE</p>
+          <h2 class="h2" id="dowod-title">Od dokumentacji do materiałów przetargowych.</h2>
+          <p class="lead">Wykonane prace obejmowały uporządkowanie dokumentacji inwestycji, przygotowanie zakresów do wyceny oraz rejestrów pytań, decyzji i ryzyk — do wersji gotowych do zbierania ofert.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card card--bar">
+            <div class="card__num">01 · DOKUMENTACJA</div>
+            <h3 class="card__title">Uporządkowana dokumentacja</h3>
+            <p class="card__text">Przegląd materiałów, uporządkowanie rewizji oraz wskazanie powtórzeń i rozbieżności, zanim cokolwiek trafiło do oferentów.</p>
+          </article>
+          <article class="card card--bar">
+            <div class="card__num">02 · REJESTR</div>
+            <h3 class="card__title">Pytania i decyzje w rejestrze</h3>
+            <p class="card__text">Wątpliwości i ryzyka z odwołaniem do dokumentacji, z wagą i wskazaniem spraw wymagających rozstrzygnięcia po stronie inwestora.</p>
+          </article>
+          <article class="card card--bar">
+            <div class="card__num">03 · WYCENA</div>
+            <h3 class="card__title">Zakres przygotowany do wyceny</h3>
+            <p class="card__text">Tabele zakresów i paczki branżowe przygotowane do zbierania i porównywania ofert, z jawnym wskazaniem spraw otwartych.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="dlaczego" aria-labelledby="dlaczego-title">
       <div class="wrap">
         <div class="shead">
-          <p class="eyebrow">01 / PEŁNY CYKL</p>
+          <p class="eyebrow">PEŁNY CYKL</p>
           <h2 class="h2" id="dlaczego-title">Budowa zaczyna się przed ofertą i nie kończy na podpisaniu kontraktu.</h2>
         </div>
         <p class="lead">Rozwój działalności, wybór szans, oferta, mobilizacja, realizacja, koszt, harmonogram, zmiany, roszczenia i rozliczenie tworzą jeden łańcuch odpowiedzialności. Słaba decyzja na jednym etapie wraca na kolejnym — zwykle później i drożej.</p>
@@ -400,7 +495,7 @@
           <article class="card card--bar">
             <div class="card__num">/02 · OFERTA I PRZYGOTOWANIE</div>
             <h3 class="card__title">Wiedzieć, co wyceniamy i na jakich warunkach</h3>
-            <p class="card__text">Dokumentacja, zakres, kosztorys, rynek podwykonawców, harmonogram ofertowy, ryzyka kontraktowe, założenia, cena oraz przygotowanie przekazania kontraktu do realizacji. Tabela elementów scalonych może być jednym z rezultatów pracy — nie jest produktem ani nazwą systemu.</p>
+            <p class="card__text">Dokumentacja, zakres, kosztorys, rynek podwykonawców, harmonogram ofertowy, ryzyka kontraktowe, założenia, cena oraz przygotowanie przekazania kontraktu do realizacji.</p>
           </article>
           <article class="card card--bar">
             <div class="card__num">/03 · REALIZACJA I WYNIK</div>
@@ -417,10 +512,12 @@
           <p class="eyebrow eyebrow--ondark">DOŚWIADCZENIE</p>
           <h2 class="h2" id="o-mnie-title">Pełny cykl znam z praktyki.</h2>
         </div>
-        <p class="lead">Nazywam się Łukasz Hildebrandt. Od blisko 20 lat pracuję po stronie generalnego wykonawcy, w tym przez 15 lat bezpośrednio w realizacji. Prowadziłem budowy i kontrakty, odpowiadałem za zespoły, podwykonawców, koszt, harmonogram, zmiany, roszczenia i wynik. Budowałem również działalność regionalną: od rynku i relacji, przez pipeline i oferty, po przygotowanie organizacji do realizacji.</p>
-        <div class="grid grid-3">
-          <article class="card"><div class="card__num">15 LAT</div><h3 class="card__title">realizacji</h3><p class="card__text">Doświadczenie budowy od środka, nie tylko jej oceny z zewnątrz.</p></article>
-          <article class="card"><div class="card__num">PEŁNY CYKL</div><h3 class="card__title">od szansy do rozliczenia</h3><p class="card__text">Połączenie perspektywy handlowej, operacyjnej, kontraktowej i finansowej.</p></article>
+        <p class="lead">Nazywam się Łukasz Hildebrandt. Od blisko 20 lat pracuję po stronie generalnego wykonawcy — od asystenta kierownika budowy do dyrektora ds. produkcji i dyrektora regionalnego, łącząc prowadzenie realizacji z odpowiedzialnością za kontrakty i wynik finansowy.</p>
+        <p class="lead" style="margin-top:18px">W Budros kierowałem pionem realizacyjnym, w Eurobud zarządzałem portfelem kilku inwestycji równolegle, w Democo Poland budowałem od podstaw oddział w Trójmieście. Przygotowywałem oferty na obiekty hotelowe, mieszkaniowe i użyteczności publicznej; największe kontrakty przekraczały 100 mln zł. Od września 2026 pracuję na pełen etat w Hildebrandt Management.</p>
+        <p class="lead" style="margin-top:18px">Wiem, jak generalny wykonawca buduje ofertę, gdzie chowa się marża i z czego składa się roszczenie — bo robiłem to przez dwadzieścia lat. Dlatego tabela do wyceny i paczka dokumentacji, które przygotowuję, wyprzedzają pytania oferentów, a rejestr decyzji powstaje wtedy, gdy decyzję jeszcze można podjąć spokojnie.</p>
+        <div class="grid grid-3" style="margin-top:40px">
+          <article class="card"><div class="card__num">15 LAT</div><h3 class="card__title">bezpośrednio w realizacji</h3><p class="card__text">Budowy i kontrakty prowadzone od środka: zespoły, podwykonawcy, koszt, harmonogram, zmiany, roszczenia.</p></article>
+          <article class="card"><div class="card__num">DYREKTOR REGIONALNY</div><h3 class="card__title">oddział i pipeline</h3><p class="card__text">Rynek i relacje, kwalifikacja szans, oferty, przygotowanie organizacji do realizacji — po stronie odpowiedzialności za wynik.</p></article>
           <article class="card"><div class="card__num">PRAKTYK + NARZĘDZIA</div><h3 class="card__title">kompetencja, którą można skalować</h3><p class="card__text">Technologia zwiększa przepustowość pracy. Osąd i odpowiedzialność pozostają po stronie człowieka.</p></article>
         </div>
       </div>
@@ -444,7 +541,7 @@
     <section class="section" id="perspektywa" aria-labelledby="perspektywa-title">
       <div class="wrap">
         <div class="shead">
-          <p class="eyebrow">02 / JAK PRACUJĘ</p>
+          <p class="eyebrow">JAK PRACUJĘ</p>
           <h2 class="h2" id="perspektywa-title">Najpierw odpowiedzialność i wynik. Potem narzędzie.</h2>
         </div>
         <div class="grid grid-3">
@@ -461,12 +558,14 @@
         <div class="contact__grid">
           <div>
             <h2 id="kontakt-title" style="margin-top:18px">Masz kontrakt, organizację albo decyzję, która wymaga doświadczenia od początku do końca?</h2>
-            <p class="lead">Opisz sytuację w wiadomości na LinkedIn. Odpowiadam osobiście i proponuję właściwy pierwszy krok.</p>
+            <p class="lead">Opisz sytuację mailem albo na LinkedIn. Odpowiadam osobiście i proponuję pierwszy krok.</p>
             <div class="contact__actions">
-              <a class="btn btn--primary" href="https://www.linkedin.com/in/lukasz-hildebrandt/">Napisz na LinkedIn <span class="arw" aria-hidden="true">→</span></a>
+              <a class="btn btn--primary" href="mailto:office@hildebrandtmanagement.com">Napisz e-mail <span class="arw" aria-hidden="true">→</span></a>
+              <a class="btn btn--ghost-dark" href="https://www.linkedin.com/in/lukasz-hildebrandt/">LinkedIn</a>
             </div>
           </div>
           <div>
+            <div class="crow"><span class="crow__k">E-MAIL</span><span class="crow__v"><a href="mailto:office@hildebrandtmanagement.com">office@hildebrandtmanagement.com</a></span></div>
             <div class="crow"><span class="crow__k">TELEFON</span><span class="crow__v"><a href="tel:+48889447117">+48 889 447 117</a></span></div>
             <div class="crow"><span class="crow__k">LINKEDIN</span><span class="crow__v"><a href="https://www.linkedin.com/in/lukasz-hildebrandt/">Łukasz Hildebrandt →</a></span></div>
             <div class="crow"><span class="crow__k">FIRMA</span><span class="crow__v"><a href="https://www.linkedin.com/company/110000786/">Hildebrandt Management →</a></span></div>
@@ -479,10 +578,17 @@
 
   <footer class="footer">
     <div class="wrap">
-      <div class="fmeta"><b translate="no" class="notranslate">Hildebrandt Management</b> · Łukasz Hildebrandt<br><a href="tel:+48889447117">+48 889 447 117</a> · Gdańsk / Trójmiasto, Polska</div>
+      <div class="fmeta"><b translate="no" class="notranslate">Hildebrandt Management</b> · Łukasz Hildebrandt<br><a href="mailto:office@hildebrandtmanagement.com">office@hildebrandtmanagement.com</a> · <a href="tel:+48889447117">+48 889 447 117</a> · Gdańsk / Trójmiasto, Polska</div>
       <div class="fcopy">© 2026 <span translate="no" class="notranslate">Hildebrandt Management</span>. Od strategii i oferty przez realizację po wynik kontraktu.</div>
     </div>
   </footer>
+
+
+  <script>
+  /* Ulepszenie: zamyka menu mobilne po wyborze odnośnika. Bez JS menu działa przez checkbox. */
+  (function(){var c=document.getElementById('navCheck'),l=document.getElementById('navLinks');
+  if(c&&l){l.addEventListener('click',function(e){if(e.target.tagName==='A'){c.checked=false;}});}})();
+  </script>
 
 </body>
 </html>

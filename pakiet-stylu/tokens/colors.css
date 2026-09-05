@@ -1,0 +1,55 @@
+/* HMDesign — kolory. Wartości 1:1 z pliku wzorcowego HMDesign v1.0.
+   Zasada: pomarańcz + czerń + biel; szarości pomocnicze; zieleń TYLKO
+   dla wątku „sustainability". Max ~3 kolory na kompozycję. Bez ciepłych beżów. */
+:root{
+  /* ---- Marka (base) ---- */
+  --hm-orange:      #eb5c25;   /* akcent podstawowy */
+  --hm-orange-deep: #c9481a;   /* hover / press */
+  --hm-black:       #232120;   /* atrament / logotyp */
+  --hm-white:       #ffffff;
+
+  /* ---- Szarości pomocnicze (base) ---- */
+  --hm-grey-700: #48494b;      /* tekst prowadzący / listy */
+  --hm-grey-600: #6a6b6d;      /* miękki atrament (opisy) */
+  --hm-grey-500: #919295;      /* tekst wyciszony / stopki */
+  --hm-grey-400: #b4b5b7;      /* np. „/ 04" w numerze strony */
+  --hm-grey-300: #d1d3d3;      /* linia mastheadu, jasny tekst na czerni */
+  --hm-grey-200: #e4e5e5;      /* włoskowate linie (hairline) */
+  --hm-grey-100: #f6f7f7;      /* tło kart szarych / nagłówki tabel */
+
+  /* ---- Powierzchnie akcentu (base) ---- */
+  --hm-peach: #fdefe9;         /* tło callout jasnego */
+
+  /* ---- Sustainability — WYŁĄCZNIE ten wątek (base) ---- */
+  --hm-green-deep: #034745;
+  --hm-green:      #12a537;
+
+  /* ---- Akcent dokumentu — podmieniany per dokument ----
+     dozwolone: var(--hm-orange) / var(--hm-black) / var(--hm-green-deep) */
+  --hm-accent: var(--hm-orange);
+
+  /* ============ Aliasy semantyczne ============ */
+  /* Tekst */
+  --hm-text:        var(--hm-black);      /* nagłówki, wyróżnienia */
+  --hm-text-lead:   var(--hm-grey-700);   /* akapit prowadzący (lead) */
+  --hm-text-soft:   var(--hm-grey-600);   /* body / opisy kart */
+  --hm-text-muted:  var(--hm-grey-500);   /* stopki, podpisy */
+  --hm-text-faint:  var(--hm-grey-400);   /* „/ 04", separatory numerów */
+  --hm-text-invert: var(--hm-white);      /* tekst na czerni */
+  --hm-text-invert-soft: var(--hm-grey-300); /* jasny tekst na czerni */
+
+  /* Powierzchnie */
+  --hm-surface:         var(--hm-white);
+  --hm-surface-grey:    var(--hm-grey-100);
+  --hm-surface-dark:    var(--hm-black);
+  --hm-surface-callout: var(--hm-peach);
+
+  /* Linie */
+  --hm-hairline: var(--hm-grey-200);   /* włoskowate linie, ramki kart */
+  --hm-rule:     var(--hm-grey-300);   /* linia mastheadu */
+
+  /* Stany interakcji (dla użycia ekranowego) */
+  --hm-accent-hover: var(--hm-orange-deep);
+  --hm-selection-bg: var(--hm-orange);
+  --hm-selection-fg: var(--hm-white);
+}

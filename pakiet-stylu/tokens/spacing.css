@@ -1,0 +1,37 @@
+/* HMDesign — przestrzeń, geometria i detale konstrukcyjne.
+   System jest print-first (A4, mm); deck 16:9 skaluje te same relacje w px. */
+:root{
+  /* Geometria strony A4 */
+  --hm-page-w:            210mm; /* @kind spacing */
+  --hm-page-h:            297mm; /* @kind spacing */
+  --hm-page-w-landscape:  297mm; /* @kind spacing */
+  --hm-page-h-landscape:  210mm; /* @kind spacing */
+
+  /* Marginesy kolumny treści (top / x / bottom) — wartości wzorcowe */
+  --hm-margin-top:    10mm; /* @kind spacing */
+  --hm-margin-x:      13mm; /* @kind spacing */
+  --hm-margin-bottom: 11mm; /* @kind spacing */
+
+  /* Detale marki */
+  --hm-bar:            2.5mm; /* @kind spacing */
+  --hm-bar-deck:       10px;  /* @kind spacing */
+  --hm-diagonal-angle: 62deg; /* @kind other */
+  --hm-gap:            2.6mm; /* @kind spacing */
+  --hm-radius:         0;     /* @kind radius */
+
+  /* Sygnet / kwadracik przy marce */
+  --hm-brand-square: 3mm;  /* @kind spacing */
+  --hm-square-deck:  13px; /* @kind spacing */
+
+  /* Cień strony (tylko widok ekranowy; druk = brak) */
+  --hm-page-shadow:  0 12px 28px rgba(35, 33, 32, .14); /* @kind shadow */
+  --hm-slide-shadow: 0 14px 40px rgba(0, 0, 0, .45);    /* @kind shadow */
+
+  /* Skala odstępów (px, do użycia ekranowego / komponentów) */
+  --hm-space-1: 4px;  /* @kind spacing */
+  --hm-space-2: 8px;  /* @kind spacing */
+  --hm-space-3: 12px; /* @kind spacing */
+  --hm-space-4: 16px; /* @kind spacing */
+  --hm-space-5: 22px; /* @kind spacing */
+  --hm-space-6: 32px; /* @kind spacing */
+}
