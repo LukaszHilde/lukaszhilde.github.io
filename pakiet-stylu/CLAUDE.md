@@ -8,14 +8,17 @@ własnego kroju ani własnych komponentów.
 `tokens/` (wartości), `fonts/` (Lato), `referencja/` (działający wzorzec strony
 i podstrony). Kopia robocza: `C:\HM\PROJEKTY\strona-www\WYNIKI\pakiet-stylu\`.
 
-**Treść strony podlega zatwierdzonemu stanowi HM** w Notion, strona „HM — SYSTEM"
-(przestrzeń HM SYSTEM): https://app.notion.com/p/3d2b1115d89480ffa89dcfc5c776feb1
-Obowiązujące usługi (05.09.2026): **TES — wspólna podstawa do porównania ofert**
-oraz **Audyt dokumentacji i paczki podwykonawcze**. Ich zatwierdzone teksty są
-w `index.html` (sekcja `#uslugi`). Dawne nazwy „TES+", „obieg zdarzeń
-z odpowiedzialnością", „widok zarządczy" **nie obowiązują** — nie wracają do treści.
-Wygląd — HMDesign; treść — decyzja Łukasza zapisana w Notion. Zmiana tekstu
-usług wymaga jego wyraźnego polecenia.
+## Rola i treść — decyzja 05.09.2026
+
+ChatGPT Work prowadzi strategię, marketing, metodologię i rozwój oferty. Claude Code wykonuje uzgodnione zmiany techniczne. Łukasz podejmuje decyzje. Cowork jest wycofany z bieżącego obiegu HM.
+Przed pracą przeczytaj wspólny `C:\HM\START_HM.md`, `C:\HM\CLAUDE.md` i stan zadania strony. Jeżeli tych plików nie ma w środowisku, wskaż brak i skorzystaj z jawnie przekazanego zakresu.
+
+HM obejmuje strategię i rozwój, ofertę, przygotowanie, realizację i wynik kontraktu. Metodologia łączenia ludzi, informacji, decyzji i odpowiedzialności jest szersza niż pierwsze dwie usługi. Wolno opisywać system pracy; nie wolno utożsamiać HM wyłącznie z TES, audytem dokumentacji albo narzędziami AI.
+HMDesign i pliki stylu określają wygląd. Stare GLOS.md, wzorce i pamięć modelu nie narzucają obecnego pozycjonowania.
+
+Pierwsze zatwierdzone usługi: **TES — wspólna podstawa do porównania ofert** i **Audyt dokumentacji i paczki podwykonawcze**. Zachowaj przekazane opisy. Zmiana sensu, zakresu, liczb lub narracji wymaga jednoznacznego polecenia Łukasza. Wdrożenie uzgodnionej zmiany nie wymaga ponownego pytania.
+Przy zmianie EN tłumacz aktualną zatwierdzoną PL w całości, zachowując zakres i znaczenie. Nie łącz nowej oferty z dawnymi sekcjami EN. Uogólnienia liczb muszą być prawdziwe i spójne językowo; przygotowanie oferty nie oznacza prowadzenia realizacji.
+[HM — SYSTEM](https://app.notion.com/p/3d2b1115d89480ffa89dcfc5c776feb1) przechowuje zatwierdzone ustalenia. Najnowsze jednoznaczne polecenie Łukasza ma pierwszeństwo przed starszym zapisem.
 
 ## Jak system jest tu wpięty
 
@@ -70,29 +73,19 @@ Każda podstrona: własny `<title>`, `description`, `og:*`, `canonical`,
 Gdańsk / Trójmiasto, Polska · LinkedIn: linkedin.com/in/lukasz-hildebrandt
 ```
 
-E-mail jest głównym kanałem kontaktu (przycisk podstawowy w sekcji Kontakt),
-LinkedIn drugim. E-mail i telefon występują w `index.html` i `english/index.html`
-w trzech miejscach: przycisk w Kontakcie, lista kontaktowa (`.crow`) i stopka
-(`.fmeta`). Zawsze jako `mailto:office@hildebrandtmanagement.com` oraz
-`tel:+48889447117` z tekstem `+48 889 447 117`. Zmiana = sześć miejsc, dwa pliki.
+E-mail jest głównym kanałem kontaktu, LinkedIn drugim. Sprawdzaj wszystkie rzeczywiste wystąpienia kontaktu w PL i EN; nie zakładaj sztywnej liczby miejsc.
+Adres: `mailto:office@hildebrandtmanagement.com`. Telefon: `tel:+48889447117`, tekst `+48 889 447 117`.
 
 ## Publikacja — pułapka remote'ów
 
-Push **wyłącznie** przez GitHub Desktop zalogowany kontem **LukaszHilde**.
-Istnieje fork `hmaicentrum-lgtm/lukaszhilde.github.io` **bez GitHub Pages**;
-gdy GitHub Desktop przepnie `origin` na fork, push „się uda", a strona się nie
-zmieni. Poprawny stan remote'ów:
-
-```
-git remote set-url origin https://github.com/LukaszHilde/lukaszhilde.github.io.git
-git remote remove upstream
-```
-
-W sesjach Claude Code `git push` nie zadziała (brak dostępu do tokenu GitHub Desktop)
-— odczyt (`git fetch`, API) działa, bo repo jest publiczne.
+Publikacja wymaga jednoznacznego polecenia Łukasza oraz sprawdzonego wyniku. Dotychczasowy uzgodniony kanał to GitHub Desktop na koncie **LukaszHilde**.
+Właściwe repo: `LukaszHilde/lukaszhilde.github.io`. Przed ewentualną publikacją sprawdź `git remote -v` i docelową gałąź. Istnieje też historyczny fork `hmaicentrum-lgtm/lukaszhilde.github.io`; nie zakładaj, że push tam zmieni właściwą stronę.
+Nie zmieniaj remote, nie usuwaj upstream, nie wykonuj force-push, resetu ani czyszczenia cudzych zmian w ramach porządkowania instrukcji. Nie zakładaj braku lub obecności uprawnień na podstawie starej sesji.
+Sprawdź wygląd na komputerze i telefonie, linki, kontakt i spójność PL/EN. Przegląd samego kodu nie jest kontrolą wizualną. Przed publikacją przekaż gotowy wynik do niezależnego przeglądu w ChatGPT Work.
 
 ## Odstępstwa
 
 | Odstępstwo | Powód | Data |
 |---|---|---|
 | Tokeny i fonty wklejone inline zamiast linkowane z `hmdesign/styles.css` | Strona jest celowo jednoplikowa i w 100% offline-safe; brak buildu | 2026-09-02 |
+
