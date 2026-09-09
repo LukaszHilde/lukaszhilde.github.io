@@ -76,6 +76,24 @@ Gdańsk / Trójmiasto, Polska · LinkedIn: linkedin.com/in/lukasz-hildebrandt
 E-mail jest głównym kanałem kontaktu, LinkedIn drugim. Sprawdzaj wszystkie rzeczywiste wystąpienia kontaktu w PL i EN; nie zakładaj sztywnej liczby miejsc.
 Adres: `mailto:office@hildebrandtmanagement.com`. Telefon: `tel:+48889447117`, tekst `+48 889 447 117`.
 
+## Praca z telefonu
+
+Sesje na telefonie i w chmurze nie widzą dysku `C:\HM`. Wspólną pamięcią jest repozytorium.
+
+1. **Na starcie** odczytaj `STAN.md` i sprawdź stan gałęzi (`git status`, `git log --oneline -3`,
+   na której gałęzi jesteś i czy jest zsynchronizowana z `origin`).
+2. **Kontekst bierz z repozytorium** — `CLAUDE.md`, `STAN.md`, `pakiet-stylu/`.
+   Nie zakładaj dostępu do `C:\HM\START_HM.md` ani `C:\HM\CLAUDE.md`.
+   Jeżeli czegoś brakuje, **wskaż brakujący plik po nazwie** i pracuj na jawnie przekazanym zakresie.
+   Nie zgaduj treści, której nie ma w repozytorium.
+3. **Na koniec** zaktualizuj `STAN.md`, zrób commit i push do gałęzi roboczej.
+   Kontener sesji jest tymczasowy — co nie zostało wypchnięte, przepada.
+   Jeżeli zapis, commit albo push się nie powiedzie, **powiedz o tym wprost** i podaj powód.
+   Nie kończ sesji milczeniem po nieudanym zapisie.
+
+Telefon służy do zlecania domkniętych zadań, kontroli wizualnej i decyzji.
+Zakres i treść ustalamy wcześniej — reguła z rozdziału „Rola i treść" obowiązuje tak samo.
+
 ## Publikacja — pułapka remote'ów
 
 Publikacja wymaga jednoznacznego polecenia Łukasza oraz sprawdzonego wyniku. Dotychczasowy uzgodniony kanał to GitHub Desktop na koncie **LukaszHilde**.
